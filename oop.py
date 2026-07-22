@@ -1,10 +1,3 @@
-# def greet(name):
-#     print("Hello", name)
-
-# # print(type(greet))
-# x=1
-# y= "hello"
-# print(str(x)+y)
 
 class Math():
     def Add(self,x):
@@ -19,6 +12,7 @@ class Math():
 # m= Math("python")
 # print(m.Add("coding"))
 class Animal():
+    no_of_animals = 2
     def __init__(self, language,name):
         self.language = language
         self.name=name
@@ -27,6 +21,13 @@ class Animal():
         print("I make sounds")
     def Introduce(self):
         print(f"Hey, i Am {self.name} and i speak {self.language}")
+    
+    #class method
+    @classmethod
+    def add_animals(cls):
+        cls.no_of_animals+=1
+        return cls.no_of_animals
+
 
 class Dog(Animal):
     pass
@@ -43,3 +44,5 @@ c=Cat("MAndarin","via",3)
 d.Introduce()
 d.Sound()
 c.Sound()
+
+print(Animal.add_animals())
