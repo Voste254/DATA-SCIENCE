@@ -1,0 +1,4 @@
+name1 = steve
+name2= emma
+school1 = Egerton university
+school2= Otok JSS
